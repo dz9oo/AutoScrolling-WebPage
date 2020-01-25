@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/dofusB.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+$primaryLightColor: white;
+$primaryDarkColorAlpha: rgba(24, 23, 23, 0.884);
+$primaryDarkColor: rgb(24, 23, 23);
+
+
+
+a, ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primaryDarkColorAlpha;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1000;
+
+    a{
+        padding: 12px 8px;
+        display: block;
+        text-decoration: none;
+        color: $primaryLightColor;
+        font: inherit;
+    }
+
+    &-title{
+        font-weight: bold;
+        margin-left: 30vw;
+    }
+
+    &-links{
+        display: flex;
+        margin-right: 20vw;
+    }
+    &-item a{
+
+    }
+}
+
+.container{
+    // background-color: rgba(255, 255, 255, 0.527);
+    width: 60vw;
+    margin: 10vh auto;
+}
+
+
+
+.article{
+    color: $primaryLightColor;
+    background-color: $primaryDarkColorAlpha;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &-border{
+        border: 5px solid transparent;
+        transition: border-width 0.3s linear;
+        transition: transform 0.2s linear;
+
+        &:hover{
+            transform: scale(1.03);
+        }
+
+        // &:hover{
+        //     border-width: 10px;
+        // }
+
+    }
+
+    &-img{
+        width: 250px;
+        height: 150px;
+    }
+
+    &-title{
+        color: inherit;
+        padding: 12px 10px;
+        flex-grow: 1;
+    }
+
+    &-prix{
+        color: inherit;
+        align-self: flex-end;
+        padding: 10px;
+    }
+}
