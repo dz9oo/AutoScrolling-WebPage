@@ -1,4 +1,4 @@
-# ResponsiveShoppingWebSite
+# AutoScrolling-WebPage
 A responsive Web Page in HTML/CSS/JavaScript, with automatic scrolling management.
 
 ## Description
