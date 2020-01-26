@@ -15,25 +15,30 @@ for (article of articles) {
     article.addEventListener("mouseover", (elem) => {
         let yPos = 0;
         let rect = elem.target.getBoundingClientRect();
-
         yPos = rect.y;
 
-        // Si mouseover au dessus d'un article qui est trop haut sur le viewport
-        if (yPos < 230) {
+        let viewPortHeight = document.documentElement.clientHeight;
+        let smouthY = 0.25 * viewPortHeight;
+        //let windowHeight = window.pageYOffset;
+
+        // calculation of the viewport's areas where the scroll should activate:
+        let topOffset = 0.3 * viewPortHeight;
+        let bottomOffset = viewPortHeight - topOffset;
+
+        if (yPos < topOffset) {
             window.scrollBy({
-                top: -100, // could be negative value
+                top: -smouthY,
                 left: 0,
                 behavior: 'smooth'
             });
-        } else if (yPos > 410) {
+        } else if (yPos > bottomOffset) {
             window.scrollBy({
-                top: 100, // could be negative value
+                top: smouthY,
                 left: 0,
                 behavior: 'smooth'
             });
         }
-
-        console.info(`position y : ${yPos}`);
+        //console.debug(`position y : ${yPos}`);
     }, true);
 };
 
