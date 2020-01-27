@@ -12,7 +12,6 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -96,7 +95,6 @@ ul li{
         text-decoration: none;
         color: $primaryLightColor;
 
-
         @media only screen and (min-width:769px){
             position: relative;
             padding: 0;
@@ -121,7 +119,6 @@ ul li{
         overflow: hidden;
 
         &-show{
-            // display: flexbox;
             animation: fade-in 1s;
         }
 
@@ -183,7 +180,6 @@ ul li{
         justify-content: space-between;
         margin-left: 3px;
         margin-right: 3px;
-   
     }
 
     @media only screen and (min-width:801px){
@@ -221,10 +217,6 @@ ul li{
         color: inherit;
         padding: 3px 10px;
         flex-grow: 1;
-
-        @media screen and (min-width:376px) and (max-width:768){
-        
-        }
     
         @media screen and (min-width:769px){
             padding: 12px 10px;
@@ -234,14 +226,15 @@ ul li{
     &-prix{
         color: inherit;
         padding: 3px 10px;
-
-        @media screen and (min-width:376px) and (max-width:768){
-        
-        }
     
         @media screen and (min-width:769px){
             align-self: flex-end;
             padding: 10px;
         }
+    }
+
+    &-dark{
+        opacity: 0.8;
+        filter: grayscale(95%);
     }
 }

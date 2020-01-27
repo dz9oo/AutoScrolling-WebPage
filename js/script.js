@@ -40,7 +40,32 @@ for (article of articles) {
         }
         //console.debug(`position y : ${yPos}`);
     }, true);
+
+    article.addEventListener("click", (elem) => {
+
+        for (article of articles) {
+            article.classList.remove("article-dark");
+            article.classList.toggle("article-dark");
+        }
+        elem.target.parentElement.classList.toggle("article-dark");
+        console.debug("DARK NOK");
+        console.info(article);
+        console.log(elem)
+
+    }, false);
 };
+
+let body = document.querySelector("body");
+body.addEventListener("click", (elem) => {
+    console.debug("click body");
+    console.info(elem);
+    if (elem.target.tagName == "BODY") {
+        for (article of articles) {
+            article.classList.remove("article-dark");
+        }
+    }
+
+});
 
 
 

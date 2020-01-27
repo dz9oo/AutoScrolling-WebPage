@@ -13,7 +13,6 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -315,5 +314,11 @@ ul li {
         align-self: flex-end;
     padding: 10px;
   }
+}
+
+.article-dark {
+  opacity: 0.8;
+  -webkit-filter: grayscale(95%);
+          filter: grayscale(95%);
 }
 /*# sourceMappingURL=style.css.map */
